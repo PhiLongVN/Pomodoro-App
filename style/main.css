@@ -53,4 +53,214 @@ h6 {
 /* ============================================ */
 /*             VVVVVVVVVVVVVVVVVVVV             */
 /* ============================================ */
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: rgba(66, 63, 63, 0.172);
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.base-timer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.base-timer__svg {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: 1s linear all;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: #41b883;
+  -webkit-box-shadow: 0 0 10px 10px red;
+          box-shadow: 0 0 10px 10px red;
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: rgba(255, 0, 0, 0.618);
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 48px;
+}
+
+h1 {
+  color: #38fb02;
+  text-shadow: -2px 1px 2px black;
+}
+
+.change button {
+  padding: 0.7rem 2rem;
+  border-radius: 20px;
+  background: #3be03b;
+  font-weight: 700;
+  -webkit-box-shadow: -1px 4px 2px black;
+          box-shadow: -1px 4px 2px black;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.change button:nth-of-type(2) {
+  background: #00e1ff;
+}
+
+.change button:hover {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.setBlock {
+  position: absolute;
+  padding: 2rem;
+  background: rgba(255, 123, 0, 0.991);
+  border-radius: 20px;
+  display: none;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  z-index: 2;
+}
+
+.setBlock::before {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  background: rgba(142, 137, 137, 0.219);
+  content: '';
+  z-index: -1;
+}
+
+.setBlock .close {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: -1rem;
+  font-weight: 900;
+}
+
+.setBlock .close .warn {
+  font-size: 1.2rem;
+  color: #c41218;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 0;
+}
+
+.setBlock .close .closebt:hover {
+  color: #66ff00;
+  cursor: pointer;
+}
+
+.setBlock input {
+  width: 90px;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.setBlock .set {
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  font-weight: 700;
+  background: #50f72b;
+  cursor: pointer;
+}
+
+.setBlock .set:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
 /*# sourceMappingURL=main.css.map */
